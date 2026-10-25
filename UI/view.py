@@ -36,7 +36,7 @@ class View(ft.UserControl):
         self.txt_longitude = ft.TextField(label="Longitude", hint_text="inserire una longitudine")
         self.ddshape = ft.Dropdown(label="Shape",
                                    hint_text="Forma da analizzare per gli avvistamenti.")
-        self._controller.fill_ddshape()
+        self._controller.fillDDShape()
 
         row1 = ft.Row([self.txt_latitude, self.txt_longitude, self.ddshape],
                       alignment=ft.MainAxisAlignment.SPACE_EVENLY)
@@ -49,7 +49,7 @@ class View(ft.UserControl):
         self.btn_path = ft.ElevatedButton(text="Calcola percorso",
                                           tooltip="Risolvi il punto 2",
                                           on_click=self._controller.handle_path)
-        self.btn_path.disabled = True
+        self.btn_path.disabled = False
 
         row2 = ft.Row([self.btn_graph, self.btn_path],
                       alignment=ft.MainAxisAlignment.SPACE_EVENLY)
